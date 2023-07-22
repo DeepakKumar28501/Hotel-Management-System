@@ -1,14 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database"
+import { Database, getDatabase } from "firebase/database"
               
 const firebaseConfig = {
-  apiKey: "AIzaSyDzha_p5FDDTlfpUy2x59R_1uHUP2eILtw",
-  authDomain: "jawanpakhackathon.firebaseapp.com",
-  projectId: "jawanpakhackathon",
-  storageBucket: "jawanpakhackathon.appspot.com",
-  messagingSenderId: "845328112334",
-  appId: "1:845328112334:web:80cb6396f82ad915ea4e9f"
+  apiKey: "AIzaSyDW8BGE0C2CMTXpXVfO5YBROeM29KvM8tI",
+  authDomain: "celebal-hotel.firebaseapp.com",
+  projectId: "celebal-hotel",
+  storageBucket: "celebal-hotel.appspot.com",
+  messagingSenderId: "462632378322",
+  appId: "1:462632378322:web:7a6c2333cd82834427f20b",
+  measurementId: "G-HBZFQ6ZZQJ",
+  databaseURL:'https://celebal-hotel-default-rtdb.firebaseio.com'
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

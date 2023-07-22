@@ -21,6 +21,8 @@ export function UserAuthContextProvider({ children }) {
   const uuid = uid();
 
   function logIn(email, password) {
+    // console.log(email);
+    // console.log(password);
     get(child(ref(db), "/users")).then((data) => {
       const userAuth = Object.values(data.val()).filter(
         (item) => item.email === email && item.isAdmin === false
@@ -40,6 +42,7 @@ export function UserAuthContextProvider({ children }) {
         name,
         number,
         id,
+        password,
         isAdmin: false,
       });
     });

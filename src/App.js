@@ -1,4 +1,4 @@
-import { child, get, ref } from "firebase/database";
+import { child, get, ref,getDatabase,set } from "firebase/database";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -7,6 +7,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import { db } from "./firebase";
+import { auth } from "./firebase";
 import Home from "./pages/Home";
 import { ReadFromFirebase } from "./Redux/actions";
 import Login from "./Components/Login";
@@ -23,7 +24,9 @@ import Booknow from "./pages/Booknow";
 import Footer from "./Components/Footer";
 
 function App() {
+  
   const dispatch = useDispatch();
+  
 
   function readFromDatabase() {
     const dbRef = ref(db);
@@ -57,7 +60,10 @@ function App() {
   // }, [hotel]);
 
   return (
-    <div className="App">
+   
+   
+      <div className="App">
+      
       <BrowserRouter>
         <UserAuthContextProvider>
           <Navbar />
@@ -93,6 +99,8 @@ function App() {
         </UserAuthContextProvider>
       </BrowserRouter>
     </div>
+   
+    
   );
 }
 

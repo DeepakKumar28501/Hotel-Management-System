@@ -24,7 +24,7 @@
               style={{ cursor: "pointer" }}
               onClick={() => navigate("/")}
             >
-              Hotel.
+              Celebal Hotel
             </span>
             <a
               href="void(0)"
